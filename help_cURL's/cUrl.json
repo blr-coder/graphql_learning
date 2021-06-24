@@ -1,0 +1,9 @@
+curl --location --request POST 'http://localhost:8080/query' \
+--header 'Content-Type: application/json' \
+--data-raw '{"query":"mutation {\n  createUser(input: {name: \"JJJ\", pass: \"qwerty\"}){\n    id,\n    name,\n    pass\n  }\n}","variables":{}}'
+
+
+
+curl --location --request POST 'http://localhost:8080/query' \
+--header 'Content-Type: application/json' \
+--data-raw '{"query":"query {\n\tgetUsers{\n    id\n    name\n  }\n}","variables":{}}'
